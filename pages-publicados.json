@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "a-elegancia-indiana",
+    "titulo": "A Elegância Indiana Traduzida para a Mulher Brasileira",
+    "status": "Publicado",
+    "imagem": "saidas/posts-individuais/a-elegancia-indiana/slide-01.png",
+    "preview": "previas/a-elegancia-indiana.html"
+  },
+  {
+    "slug": "a-lotus-floresceu",
+    "titulo": "A Lótus Floresceu — O Manifesto de Transição",
+    "status": "Publicado",
+    "imagem": "saidas/posts-individuais/a-lotus-floresceu/slide-01.png",
+    "preview": "previas/a-lotus-floresceu.html"
+  },
+  {
+    "slug": "quem-e-geysa-viana",
+    "titulo": "Quem é Geysa Viana — A Mulher, a Curadoria e os Não Negociáveis",
+    "status": "Publicado",
+    "imagem": "saidas/carrosseis/quem-e-geysa-viana/slide-01.png",
+    "preview": "previas/quem-e-geysa-viana.html"
+  },
+  {
+    "slug": "como-funciona-nossa-casa",
+    "titulo": "Como Funciona Nossa Casa — Guia de Compra, Loja Física & Atendimento VIP",
+    "status": "Publicado",
+    "imagem": "saidas/carrosseis/como-funciona-nossa-casa/slide-01.png",
+    "preview": "previas/como-funciona-nossa-casa.html"
+  },
+  {
+    "slug": "avatar-oficial",
+    "titulo": "Avatar Oficial do Perfil — Geysa Viana Moda Indiana (Opção 1 Escolhida)",
+    "status": "aprovado",
+    "imagem": "saidas/perfil/avatar-oficial.png",
+    "preview": "previas/avatar-oficial.html"
+  },
+  {
+    "slug": "capas-dos-destaques",
+    "titulo": "Capas Oficiais dos Destaques — Geysa Viana Moda Indiana",
+    "status": "pendente_aprovacao",
+    "imagem": "saidas/destaques/capa-01-nova-era.png",
+    "preview": "previas/capas-dos-destaques.html"
+  },
+  {
+    "slug": "a-nobreza-da-seda-e-arte-textil",
+    "titulo": "A Nobreza da Seda e Arte Têxtil — Por Que Não é Apenas um Vestido",
+    "status": "Publicado",
+    "imagem": "saidas/carrosseis/a-nobreza-da-seda-e-arte-textil/slide-01.png",
+    "preview": "previas/a-nobreza-da-seda-e-arte-textil.html"
+  },
+  {
+    "slug": "lancamento-loja-virtual",
+    "titulo": "Lançamento Oficial da Loja Virtual — Geysa Viana Moda Indiana",
+    "status": "Publicado",
+    "imagem": "saidas/carrosseis/lancamento-loja-virtual/slide-01.png",
+    "preview": "previas/lancamento-loja-virtual.html"
+  },
+  {
+    "slug": "vestido-azul-verde-paisley",
+    "titulo": "Editorial: Vestido Frente Única em Viscose Azul e Verde Paisley — Geysa Viana",
+    "status": "pendente_aprovacao",
+    "imagem": "saidas/carrosseis/vestido-turquesa-paisley-editorial/slide-1.png",
+    "preview": "previas/vestido-azul-verde-paisley.html"
+  },
+  {
+    "slug": "vestido-curto-tomara-que-caia-azul",
+    "titulo": "Editorial: Vestido Indiano Curto Tomara que Caia com Lastex Azul Boho — Geysa Viana",
+    "status": "pendente_aprovacao",
+    "imagem": "saidas/carrosseis/vestido-curto-tomara-que-caia-azul-boho/slide-1.png",
+    "preview": "previas/vestido-curto-tomara-que-caia-azul.html"
+  },
+  {
+    "slug": "painel-macrame-triangular-cru",
+    "titulo": "Decoração & Harmonia: Painel de Macramê Cru Triangular com Contas de Madeira",
+    "status": "pendente_aprovacao",
+    "imagem": "saidas/carrosseis/painel-macrame-triangular-cru/slide-1.png",
+    "preview": "previas/painel-macrame-triangular-cru.html"
+  },
+  {
+    "slug": "brinco-indiano-mandala-turquesa-vermelho",
+    "titulo": "Joalheria & Poder Feminino: Brinco Indiano Mandala Metal Envelhecido Turquesa e Vermelho",
+    "status": "pendente_aprovacao",
+    "imagem": "saidas/carrosseis/brinco-indiano-mandala-turquesa-vermelho/slide-1.png",
+    "preview": "previas/brinco-indiano-mandala-turquesa-vermelho.html"
+  },
+  {
+    "slug": "camisetas-indianas-mandalas-variedades",
+    "titulo": "Coleção Camisetas & Batas: Grande Mandala Solar e Variedade de Estilos — Geysa Viana",
+    "status": "pendente_aprovacao",
+    "imagem": "saidas/carrosseis/camisetas-indianas-mandalas-variedades/slide-1.png",
+    "preview": "previas/camisetas-indianas-mandalas-variedades.html"
+  },
+  {
+    "slug": "kate-middleton-moda-indiana",
+    "titulo": "Editorial & Notícia: Kate Middleton, Earthshot Gala & Quebra do Mito da Moda Indiana",
+    "status": "Publicado",
+    "imagem": "saidas/carrosseis/kate-middleton-moda-indiana/slide-1.png",
+    "preview": "previas/kate-middleton-moda-indiana.html"
+  },
+  {
+    "slug": "capas-reels-como-funciona-a-loja",
+    "titulo": "Reels & Capas: Como Funciona a Loja Online (Modelos para Aprovação)",
+    "status": "pendente_aprovacao",
+    "imagem": "saidas/reels/capas/capa-reels-opcao1-smartphone-vinho.png",
+    "preview": "previas/capas-reels-como-funciona-a-loja.html"
+  }
+]
