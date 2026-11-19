@@ -72,9 +72,10 @@
   {
     "slug": "painel-macrame-triangular-cru",
     "titulo": "Decoração & Harmonia: Painel de Macramê Cru Triangular com Contas de Madeira",
-    "status": "pendente_aprovacao",
+    "status": "Publicado",
     "imagem": "saidas/carrosseis/painel-macrame-triangular-cru/slide-1.png",
-    "preview": "previas/painel-macrame-triangular-cru.html"
+    "preview": "previas/painel-macrame-triangular-cru.html",
+    "publicadoEm": "2026-11-19T13:24:58.010Z"
   },
   {
     "slug": "brinco-indiano-mandala-turquesa-vermelho",
@@ -103,5 +104,12 @@
     "status": "pendente_aprovacao",
     "imagem": "saidas/reels/capas/capa-reels-opcao1-smartphone-vinho.png",
     "preview": "previas/capas-reels-como-funciona-a-loja.html"
+  },
+  {
+    "slug": "stories-depoimentos-google",
+    "titulo": "Stories & Destaque: Avaliações 5.0★ Google Meu Negócio — Geysa Viana",
+    "status": "pendente_aprovacao",
+    "imagem": "saidas/stories/depoimentos-google/story-01-capa-5estrelas-google.png",
+    "preview": "previas/stories-depoimentos-google.html"
   }
 ]
