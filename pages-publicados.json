@@ -113,5 +113,12 @@
     "status": "pendente_aprovacao",
     "imagem": "saidas/stories/depoimentos-google/story-01-capa-5estrelas-google.png",
     "preview": "previas/stories-depoimentos-google.html"
+  },
+  {
+    "slug": "saia-indiana-longa-evase-mandalas-paisley",
+    "titulo": "Coleção Algodão Puro: Saia Indiana Longa Evasê Azul Marinho com Mandalas e Paisley (Açafrão Solar)",
+    "status": "pendente_aprovacao",
+    "imagem": "saidas/carrosseis/saia-indiana-longa-evase-mandalas-paisley/slide-1.png",
+    "preview": "previas/saia-indiana-longa-evase-mandalas-paisley.html"
   }
 ]
