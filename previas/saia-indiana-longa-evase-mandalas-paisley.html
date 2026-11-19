@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Saia Indiana Longa Evasê em Algodão Azul Marinho com Mandalas e Paisley — Geysa Viana</title>
+  <style>
+    :root {
+      --page: #d8d3c8;
+      --surface: #fff;
+      --line: #efefef;
+      --text: #111;
+      --muted: #737373;
+      --blue: #0095f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 38px 18px;
+      background: var(--page);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .post {
+      width: min(420px, calc(100vw - 36px));
+      overflow: hidden;
+      border: 1px solid #dbdbdb;
+      border-radius: 10px;
+      background: var(--surface);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.14);
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 52px;
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .avatar {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      overflow: hidden;
+      border-radius: 50%;
+      background: #eee;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .username {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .verified {
+      width: 13px;
+      height: 13px;
+      flex: 0 0 13px;
+      color: var(--blue);
+    }
+
+    .icon-button {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .post-header .icon-button svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #000;
+      user-select: none;
+      touch-action: pan-y;
+      cursor: grab;
+    }
+
+    .media.dragging {
+      cursor: grabbing;
+    }
+
+    .track {
+      display: flex;
+      height: 100%;
+      will-change: transform;
+    }
+
+    .slide {
+      position: relative;
+      min-width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+
+    .counter {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      padding: 4px 9px;
+      border-radius: 14px;
+      background: rgba(18, 18, 18, 0.72);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      pointer-events: none;
+    }
+
+    .hit {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 24%;
+      z-index: 2;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .hit.prev { left: 0; }
+    .hit.next { right: 0; }
+    .hit:disabled { cursor: default; }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      min-height: 18px;
+      padding-top: 8px;
+      background: var(--surface);
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: #c7c7c7;
+      transition: background 180ms ease, transform 180ms ease;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: var(--blue);
+      transform: scale(1.15);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 12px 6px;
+      background: var(--surface);
+    }
+
+    .actions .icon-button svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .actions .save {
+      margin-left: auto;
+    }
+
+    .likes {
+      padding: 0 12px 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--surface);
+    }
+
+    .caption {
+      padding: 0 12px 14px;
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: var(--text);
+      background: var(--surface);
+      white-space: pre-wrap;
+    }
+
+    .caption strong {
+      font-weight: 600;
+    }
+
+    .caption .more {
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .time {
+      padding: 0 12px 14px;
+      font-size: 11px;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <article class="post">
+    <header class="post-header">
+      <div class="avatar">
+        <img src="../saidas/perfil/avatar-oficial.png" alt="Geysa Viana">
+      </div>
+      <div class="user-info">
+        <a class="username" href="#">geysaviana.modaindiana</a>
+        <svg class="verified" viewBox="0 0 24 24" aria-label="Verificado">
+          <path fill="currentColor" d="M22 12l-2.1 2.4.3 3.2-3.1.7-1.6 2.8-2.9-1.3-2.9 1.3-1.6-2.8-3.1-.7.3-3.2L3 12l2.1-2.4-.3-3.2 3.1-.7 1.6-2.8 2.9 1.3 2.9-1.3 1.6 2.8 3.1.7-.3 3.2L22 12z"></path>
+          <path d="M8.3 12.2l2.3 2.3 5.1-5.1" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+        </svg>
+      </div>
+      <button class="icon-button" type="button" aria-label="Mais opcoes">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"></circle>
+          <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"></circle>
+          <circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </button>
+    </header>
+
+    <section class="media" id="media">
+      <div class="track" id="track"></div>
+      <span class="counter" id="counter">1/1</span>
+      <button class="hit prev" type="button" id="prev" aria-label="Slide anterior"></button>
+      <button class="hit next" type="button" id="next" aria-label="Proximo slide"></button>
+    </section>
+
+    <nav class="dots" id="dots" aria-label="Navegacao dos slides"></nav>
+
+    <section class="actions" aria-label="Acoes do post">
+      <button class="icon-button" type="button" aria-label="Curtir"><svg viewBox="0 0 24 24"><path d="M20.8 4.6c-1.8-1.8-4.7-1.8-6.5 0L12 6.9 9.7 4.6c-1.8-1.8-4.7-1.8-6.5 0s-1.8 4.7 0 6.5L12 20l8.8-8.9c1.8-1.8 1.8-4.7 0-6.5z"></path></svg></button>
+      <button class="icon-button" type="button" aria-label="Comentar"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.7 8.3 9.7 9.7 0 0 1-4.3-1l-5 1.2 1.3-4.4a8.2 8.2 0 0 1-.9-3.8A8.4 8.4 0 0 1 12 3.5a8.4 8.4 0 0 1 9 8z"></path></svg></button>
+      <button class="icon-button" type="button" aria-label="Compartilhar"><svg viewBox="0 0 24 24"><path d="M22 3L9.5 13.2"></path><path d="M22 3l-4.2 18-6.1-7.4L3 10.6 22 3z"></path></svg></button>
+      <button class="icon-button save" type="button" aria-label="Salvar"><svg viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"></path></svg></button>
+    </section>
+
+    <div class="likes">1.342 curtidas</div>
+    <p class="caption"><strong>geysaviana.modaindiana</strong> A fluidez do azul marinho profundo em harmonia com a geometria sagrada das mandalas indianas... 🪷✨
+
+Apresentamos a nossa <strong>Saia Indiana Longa Evasê</strong>: uma peça protagonista confeccionada em 100% algodão puro respirável, que abraça o corpo com leveza, movimento esvoaçante e a sofisticação da arte têxtil ancestral.
+
+Em uma rica padronagem de mandalas concêntricas e motivos paisley em tons terracota, açafrão solar e verde esmeralda, esta saia foi desenhada para a mulher que valoriza elegância autoral, conforto e exclusividade.
+
+🌿 <strong>Destaques da Peça:</strong>
+• <strong>Tecido Nobre:</strong> 100% Algodão indiano de toque suave e fresco, ideal para qualquer estação.
+• <strong>Modelagem Evasê Ampla:</strong> Cintura alta confortável que valoriza a silhueta e proporciona liberdade absoluta de movimento.
+• <strong>Estamparia Tradicional:</strong> Mandalas detalhadas com barrado floral nobre em azul marinho.
+• <strong>Versatilidade Total:</strong> Combine com regatas de linho, croppeds fluidos ou camisas de seda nobre — do casual chic ao ateliê.
+• <strong>Tamanho:</strong> Modelagem tamanho único inteligente que veste do 38 ao 44 com ajuste perfeito.
+
+🎁 <strong>Disponível na nossa loja física e no e-commerce oficial:</strong>
+💳 Parcele em até 3x sem juros no cartão ou via Pix
+📦 Envio seguro e cuidadoso para todo o Brasil
+📍 Loja física em Campos dos Goytacazes — RJ (R. Dr. Ricardo Quitete, 148 — Jóquei Club)
+
+👉 Toque no link da bio para garantir a sua ou chame no WhatsApp VIP:
+🔗 <strong>geysaviana.com.br</strong>
+
+Qual combinação você faria com essa saia: com regata branca minimalista ou com cropped estampado? Me conta aqui nos comentários! 👇
+.
+.
+#GeysaViana #ModaIndiana #SaiaIndiana #SaiaLonga #EstiloBohoChic #MandalaTêxtil #AlgodãoPuro #CamposDosGoytacazes #SlowFashionBrasil #ModaFemininaAutoral #BohoChic</p>
+    <div class="time">Agora</div>
+  </article>
+
+  <script id="slides-data" type="application/json">["../saidas/carrosseis/saia-indiana-longa-evase-mandalas-paisley/slide-1.png","../saidas/carrosseis/saia-indiana-longa-evase-mandalas-paisley/slide-2.png","../saidas/carrosseis/saia-indiana-longa-evase-mandalas-paisley/slide-3.png","../saidas/carrosseis/saia-indiana-longa-evase-mandalas-paisley/slide-4.png","../saidas/carrosseis/saia-indiana-longa-evase-mandalas-paisley/slide-5.png"]</script>
+  <script>
+    const slides = JSON.parse(document.getElementById("slides-data")?.textContent || "[]");
+    const track = document.getElementById("track");
+    const dots = document.getElementById("dots");
+    const counter = document.getElementById("counter");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const media = document.getElementById("media");
+    let current = 0;
+    let startX = 0;
+    let currentX = 0;
+    let dragging = false;
+    let didDrag = false;
+
+    slides.forEach((src, index) => {
+      const slide = document.createElement("div");
+      slide.className = "slide";
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = `Slide ${index + 1}`;
+      slide.appendChild(img);
+      track.appendChild(slide);
+
+      const dot = document.createElement("button");
+      dot.className = "dot";
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Ir para slide ${index + 1}`);
+      dot.addEventListener("click", () => {
+        current = index;
+        render();
+      });
+      dots.appendChild(dot);
+    });
+
+    function render() {
+      track.style.transition = "transform 260ms ease";
+      track.style.transform = `translateX(${-current * 100}%)`;
+      counter.textContent = `${current + 1}/${slides.length}`;
+      [...dots.children].forEach((dot, index) => dot.classList.toggle("active", index === current));
+      prev.disabled = current === 0;
+      next.disabled = current === slides.length - 1;
+    }
+
+    function go(delta) {
+      current = Math.max(0, Math.min(slides.length - 1, current + delta));
+      render();
+    }
+
+    function handleTap(delta) {
+      if (didDrag) {
+        didDrag = false;
+        return;
+      }
+      go(delta);
+    }
+
+    prev.addEventListener("click", () => handleTap(-1));
+    next.addEventListener("click", () => handleTap(1));
+
+    media.addEventListener("pointerdown", (event) => {
+      if (event.target.closest("button")) return;
+      dragging = true;
+      didDrag = false;
+      startX = event.clientX;
+      currentX = event.clientX;
+      track.style.transition = "none";
+      media.classList.add("dragging");
+      media.setPointerCapture(event.pointerId);
+    });
+
+    media.addEventListener("pointermove", (event) => {
+      if (!dragging) return;
+      currentX = event.clientX;
+      const distance = currentX - startX;
+      if (Math.abs(distance) > 8) didDrag = true;
+      const width = media.clientWidth || 1;
+      const edgeResistance = (current === 0 && distance > 0) || (current === slides.length - 1 && distance < 0) ? 0.28 : 1;
+      track.style.transform = `translateX(${(-current * 100) + ((distance * edgeResistance / width) * 100)}%)`;
+    });
+
+    function finishDrag(event) {
+      if (!dragging) return;
+      const distance = currentX - startX;
+      dragging = false;
+      media.classList.remove("dragging");
+      try { media.releasePointerCapture(event.pointerId); } catch {}
+      track.style.transition = "transform 260ms ease";
+      if (Math.abs(distance) > 40) {
+        if (distance < 0) go(1);
+        else go(-1);
+      } else {
+        render();
+      }
+    }
+
+    media.addEventListener("pointerup", finishDrag);
+    media.addEventListener("pointercancel", finishDrag);
+
+    render();
+  </script>
+</body>
+</html>
