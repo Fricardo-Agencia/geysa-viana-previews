@@ -64,6 +64,16 @@
       display: block;
       background: #e2e8f0;
     }
+    .no-thumb {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: #edf2f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
     .card-body {
       padding: 16px;
     }
@@ -90,127 +100,120 @@
     a:hover {
       text-decoration: underline;
     }
+    .empty {
+      grid-column: 1 / -1;
+      padding: 48px;
+      text-align: center;
+      background: var(--card-bg);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
   <main class="shell">
     <header>
       <h1>Vitrine de Prévias</h1>
-      <p class="subtitle">Criativo AI Studio — Galeria de publicações</p>
+      <p class="subtitle">Criativo AI Studio — Galeria de conteúdos gerados</p>
     </header>
     <section class="grid">
       <article>
-          <img src="saidas/posts-individuais/a-elegancia-indiana/slide-01.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">Publicado</span>
-            <h2>A Elegância Indiana Traduzida para a Mulher Brasileira</h2>
-            <a href="previas/a-elegancia-indiana.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/destaques/capa-01-nova-era.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">destaques • pendente_aprovacao</span>
+          <h2>Capas Oficiais dos Destaques — Geysa Viana Moda Indiana</h2>
+          <a href="capas-dos-destaques.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/posts-individuais/a-lotus-floresceu/slide-01.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">Publicado</span>
-            <h2>A Lótus Floresceu — O Manifesto de Transição</h2>
-            <a href="previas/a-lotus-floresceu.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/perfil/avatar-oficial.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">perfil • aprovado</span>
+          <h2>Avatar Oficial do Perfil — Geysa Viana Moda Indiana (Opção 1 Escolhida)</h2>
+          <a href="avatar-oficial.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/carrosseis/quem-e-geysa-viana/slide-01.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">Publicado</span>
-            <h2>Quem é Geysa Viana — A Mulher, a Curadoria e os Não Negociáveis</h2>
-            <a href="previas/quem-e-geysa-viana.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/carrosseis/a-nobreza-da-seda-e-arte-textil/slide-01.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">carrossel • rascunho</span>
+          <h2>A Nobreza da Seda e Arte Têxtil — Por Que Não é Apenas um Vestido</h2>
+          <a href="a-nobreza-da-seda-e-arte-textil.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/carrosseis/como-funciona-nossa-casa/slide-01.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">Publicado</span>
-            <h2>Como Funciona Nossa Casa — Guia de Compra, Loja Física &amp; Atendimento VIP</h2>
-            <a href="previas/como-funciona-nossa-casa.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/carrosseis/como-funciona-nossa-casa/slide-01.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">carrossel • rascunho</span>
+          <h2>Como Funciona Nossa Casa — Guia de Compra, Loja Física &amp; Atendimento VIP</h2>
+          <a href="como-funciona-nossa-casa.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/perfil/avatar-oficial.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">aprovado</span>
-            <h2>Avatar Oficial do Perfil — Geysa Viana Moda Indiana (Opção 1 Escolhida)</h2>
-            <a href="previas/avatar-oficial.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/carrosseis/kate-middleton-moda-indiana/slide-1.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">carrossel • rascunho</span>
+          <h2>Editorial &amp; Notícia: Kate Middleton, Earthshot Gala &amp; Quebra do Mito da Moda Indiana</h2>
+          <a href="kate-middleton-moda-indiana.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/destaques/capa-01-nova-era.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">pendente_aprovacao</span>
-            <h2>Capas Oficiais dos Destaques — Geysa Viana Moda Indiana</h2>
-            <a href="previas/capas-dos-destaques.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/carrosseis/lancamento-loja-virtual/slide-01.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">carrossel • rascunho</span>
+          <h2>Lançamento Oficial da Loja Virtual — Geysa Viana Moda Indiana</h2>
+          <a href="lancamento-loja-virtual.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/carrosseis/a-nobreza-da-seda-e-arte-textil/slide-01.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">Publicado</span>
-            <h2>A Nobreza da Seda e Arte Têxtil — Por Que Não é Apenas um Vestido</h2>
-            <a href="previas/a-nobreza-da-seda-e-arte-textil.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/carrosseis/quem-e-geysa-viana/slide-01.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">carrossel • rascunho</span>
+          <h2>Quem é Geysa Viana — A Mulher, a Curadoria e os Não Negociáveis</h2>
+          <a href="quem-e-geysa-viana.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/carrosseis/lancamento-loja-virtual/slide-01.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">Publicado</span>
-            <h2>Lançamento Oficial da Loja Virtual — Geysa Viana Moda Indiana</h2>
-            <a href="previas/lancamento-loja-virtual.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/posts-individuais/a-elegancia-indiana/slide-01.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">individual • rascunho</span>
+          <h2>A Elegância Indiana Traduzida para a Mulher Brasileira</h2>
+          <a href="a-elegancia-indiana.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/carrosseis/vestido-turquesa-paisley-editorial/slide-1.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">pendente_aprovacao</span>
-            <h2>Editorial: Vestido Frente Única em Viscose Azul e Verde Paisley — Geysa Viana</h2>
-            <a href="previas/vestido-azul-verde-paisley.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/posts-individuais/a-lotus-floresceu/slide-01.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">individual • rascunho</span>
+          <h2>A Lótus Floresceu — O Manifesto de Transição</h2>
+          <a href="a-lotus-floresceu.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/carrosseis/vestido-curto-tomara-que-caia-azul-boho/slide-1.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">pendente_aprovacao</span>
-            <h2>Editorial: Vestido Indiano Curto Tomara que Caia com Lastex Azul Boho — Geysa Viana</h2>
-            <a href="previas/vestido-curto-tomara-que-caia-azul.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/stories/d1-contagem-regressiva/story-01.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">story • rascunho</span>
+          <h2>Story D-1: Contagem Regressiva Oficial</h2>
+          <a href="d1-contagem-regressiva.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/carrosseis/painel-macrame-triangular-cru/slide-1.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">pendente_aprovacao</span>
-            <h2>Decoração &amp; Harmonia: Painel de Macramê Cru Triangular com Contas de Madeira</h2>
-            <a href="previas/painel-macrame-triangular-cru.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/stories/d2-conexao-base-antiga/story-01.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">story • rascunho</span>
+          <h2>Story D-2: Conexão com a Base Antiga</h2>
+          <a href="d2-conexao-base-antiga.html">Visualizar Prévia →</a>
+        </div>
+      </article>
 <article>
-          <img src="saidas/carrosseis/brinco-indiano-mandala-turquesa-vermelho/slide-1.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">pendente_aprovacao</span>
-            <h2>Joalheria &amp; Poder Feminino: Brinco Indiano Mandala Metal Envelhecido Turquesa e Vermelho</h2>
-            <a href="previas/brinco-indiano-mandala-turquesa-vermelho.html">Visualizar Prévia →</a>
-          </div>
-        </article>
-<article>
-          <img src="saidas/carrosseis/camisetas-indianas-mandalas-variedades/slide-1.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">pendente_aprovacao</span>
-            <h2>Coleção Camisetas &amp; Batas: Grande Mandala Solar e Variedade de Estilos — Geysa Viana</h2>
-            <a href="previas/camisetas-indianas-mandalas-variedades.html">Visualizar Prévia →</a>
-          </div>
-        </article>
-<article>
-          <img src="saidas/carrosseis/kate-middleton-moda-indiana/slide-1.png" alt="Capa">
-          <div class="card-body">
-            <span class="status">Publicado</span>
-            <h2>Editorial &amp; Notícia: Kate Middleton, Earthshot Gala &amp; Quebra do Mito da Moda Indiana</h2>
-            <a href="previas/kate-middleton-moda-indiana.html">Visualizar Prévia →</a>
-          </div>
-        </article>
+        <img src="../saidas/stories/d3-o-primeiro-sussurro/story-01.png" alt="Capa">
+        <div class="card-body">
+          <span class="status">story • rascunho</span>
+          <h2>Story D-3: O Primeiro Sussurro</h2>
+          <a href="d3-o-primeiro-sussurro.html">Visualizar Prévia →</a>
+        </div>
+      </article>
     </section>
   </main>
 </body>
