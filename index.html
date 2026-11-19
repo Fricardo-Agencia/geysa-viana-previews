@@ -3,218 +3,282 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <title>Vitrine de Prévias — Criativo AI Studio</title>
+  <title>Vitrine de Prévias — Geysa Viana Moda Indiana</title>
   <style>
     :root {
-      --bg: #f4f6f8;
-      --card-bg: #ffffff;
-      --text: #1a202c;
-      --muted: #718096;
-      --primary: #2a9d8f;
-      --border: #e2e8f0;
+      --bg: #0F0207;
+      --card: #1A040D;
+      --ouro: #E6CA65;
+      --text: #FFF;
+      --muted: #A39088;
+      --border: rgba(230, 202, 101, 0.2);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at 50% 10%, #2A0615 0%, #0F0207 80%);
       color: var(--text);
-      line-height: 1.5;
-    }
-    .shell {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 20px 80px;
+      min-height: 100vh;
     }
     header {
-      margin-bottom: 32px;
+      text-align: center;
+      margin-bottom: 40px;
     }
     h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--text);
+      color: var(--ouro);
+      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
     }
-    p.subtitle {
+    p.sub {
       color: var(--muted);
       font-size: 15px;
-      margin-top: 4px;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
+      gap: 28px;
+      max-width: 1240px;
+      margin: 0 auto;
     }
-    article {
-      background: var(--card-bg);
+    .card {
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
     }
-    article:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--ouro);
     }
-    img {
+    .thumb {
       width: 100%;
-      aspect-ratio: 4/5;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #000;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       display: block;
-      background: #e2e8f0;
-    }
-    .no-thumb {
-      width: 100%;
-      aspect-ratio: 4/5;
-      background: #edf2f7;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-size: 14px;
     }
     .card-body {
-      padding: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
-    .status {
-      font-size: 11px;
-      text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      color: var(--primary);
-    }
-    h2 {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 6px 0 12px;
-      line-height: 1.3;
-    }
-    a {
+    .badge {
       display: inline-block;
-      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+    .status-publicado {
+      background: rgba(46, 125, 50, 0.25);
+      color: #66BB6A;
+      border: 1px solid #4CAF50;
+    }
+    .status-pendente {
+      background: rgba(230, 202, 101, 0.15);
+      color: var(--ouro);
+      border: 1px solid var(--ouro);
+    }
+    h3 {
+      font-size: 15px;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      color: #FFF;
+      flex: 1;
+    }
+    .btn-ver {
+      display: inline-block;
+      color: var(--ouro);
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
     }
-    a:hover {
+    .btn-ver:hover {
       text-decoration: underline;
-    }
-    .empty {
-      grid-column: 1 / -1;
-      padding: 48px;
-      text-align: center;
-      background: var(--card-bg);
-      border: 1px dashed var(--border);
-      border-radius: 12px;
-      color: var(--muted);
     }
   </style>
 </head>
 <body>
-  <main class="shell">
-    <header>
-      <h1>Vitrine de Prévias</h1>
-      <p class="subtitle">Criativo AI Studio — Galeria de conteúdos gerados</p>
-    </header>
-    <section class="grid">
-      <article>
-        <img src="../saidas/destaques/capa-01-nova-era.png" alt="Capa">
+  <header>
+    <h1>Vitrine de Prévias Oficiais</h1>
+    <p class="sub">Geysa Viana Moda Indiana • Criativo AI Studio</p>
+  </header>
+  <main class="grid">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/posts-individuais/a-elegancia-indiana/slide-01.png" alt="a-elegancia-indiana" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">destaques • pendente_aprovacao</span>
-          <h2>Capas Oficiais dos Destaques — Geysa Viana Moda Indiana</h2>
-          <a href="capas-dos-destaques.html">Visualizar Prévia →</a>
+          <span class="badge status-publicado">✓ PUBLICADO NO INSTAGRAM</span>
+          <h3>A Elegância Indiana Traduzida para a Mulher Brasileira</h3>
+          <a href="previas/a-elegancia-indiana.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/perfil/avatar-oficial.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/posts-individuais/a-lotus-floresceu/slide-01.png" alt="a-lotus-floresceu" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">perfil • aprovado</span>
-          <h2>Avatar Oficial do Perfil — Geysa Viana Moda Indiana (Opção 1 Escolhida)</h2>
-          <a href="avatar-oficial.html">Visualizar Prévia →</a>
+          <span class="badge status-publicado">✓ PUBLICADO NO INSTAGRAM</span>
+          <h3>A Lótus Floresceu — O Manifesto de Transição</h3>
+          <a href="previas/a-lotus-floresceu.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/carrosseis/a-nobreza-da-seda-e-arte-textil/slide-01.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/quem-e-geysa-viana/slide-01.png" alt="quem-e-geysa-viana" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">carrossel • rascunho</span>
-          <h2>A Nobreza da Seda e Arte Têxtil — Por Que Não é Apenas um Vestido</h2>
-          <a href="a-nobreza-da-seda-e-arte-textil.html">Visualizar Prévia →</a>
+          <span class="badge status-publicado">✓ PUBLICADO NO INSTAGRAM</span>
+          <h3>Quem é Geysa Viana — A Mulher, a Curadoria e os Não Negociáveis</h3>
+          <a href="previas/quem-e-geysa-viana.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/carrosseis/como-funciona-nossa-casa/slide-01.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/como-funciona-nossa-casa/slide-01.png" alt="como-funciona-nossa-casa" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">carrossel • rascunho</span>
-          <h2>Como Funciona Nossa Casa — Guia de Compra, Loja Física &amp; Atendimento VIP</h2>
-          <a href="como-funciona-nossa-casa.html">Visualizar Prévia →</a>
+          <span class="badge status-publicado">✓ PUBLICADO NO INSTAGRAM</span>
+          <h3>Como Funciona Nossa Casa — Guia de Compra, Loja Física &amp; Atendimento VIP</h3>
+          <a href="previas/como-funciona-nossa-casa.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/carrosseis/kate-middleton-moda-indiana/slide-1.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/perfil/avatar-oficial.png" alt="avatar-oficial" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">carrossel • rascunho</span>
-          <h2>Editorial &amp; Notícia: Kate Middleton, Earthshot Gala &amp; Quebra do Mito da Moda Indiana</h2>
-          <a href="kate-middleton-moda-indiana.html">Visualizar Prévia →</a>
+          <span class="badge status-pendente">🟡 PRONTO PARA APROVAÇÃO</span>
+          <h3>Avatar Oficial do Perfil — Geysa Viana Moda Indiana (Opção 1 Escolhida)</h3>
+          <a href="previas/avatar-oficial.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/carrosseis/lancamento-loja-virtual/slide-01.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/destaques/capa-01-nova-era.png" alt="capas-dos-destaques" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">carrossel • rascunho</span>
-          <h2>Lançamento Oficial da Loja Virtual — Geysa Viana Moda Indiana</h2>
-          <a href="lancamento-loja-virtual.html">Visualizar Prévia →</a>
+          <span class="badge status-publicado">✓ PUBLICADO NO INSTAGRAM</span>
+          <h3>Capas Oficiais dos Destaques — Geysa Viana Moda Indiana</h3>
+          <a href="previas/capas-dos-destaques.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/carrosseis/quem-e-geysa-viana/slide-01.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/a-nobreza-da-seda-e-arte-textil/slide-01.png" alt="a-nobreza-da-seda-e-arte-textil" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">carrossel • rascunho</span>
-          <h2>Quem é Geysa Viana — A Mulher, a Curadoria e os Não Negociáveis</h2>
-          <a href="quem-e-geysa-viana.html">Visualizar Prévia →</a>
+          <span class="badge status-publicado">✓ PUBLICADO NO INSTAGRAM</span>
+          <h3>A Nobreza da Seda e Arte Têxtil — Por Que Não é Apenas um Vestido</h3>
+          <a href="previas/a-nobreza-da-seda-e-arte-textil.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/posts-individuais/a-elegancia-indiana/slide-01.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/lancamento-loja-virtual/slide-01.png" alt="lancamento-loja-virtual" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">individual • rascunho</span>
-          <h2>A Elegância Indiana Traduzida para a Mulher Brasileira</h2>
-          <a href="a-elegancia-indiana.html">Visualizar Prévia →</a>
+          <span class="badge status-publicado">✓ PUBLICADO NO INSTAGRAM</span>
+          <h3>Lançamento Oficial da Loja Virtual — Geysa Viana Moda Indiana</h3>
+          <a href="previas/lancamento-loja-virtual.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/posts-individuais/a-lotus-floresceu/slide-01.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/vestido-turquesa-paisley-editorial/slide-1.png" alt="vestido-azul-verde-paisley" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">individual • rascunho</span>
-          <h2>A Lótus Floresceu — O Manifesto de Transição</h2>
-          <a href="a-lotus-floresceu.html">Visualizar Prévia →</a>
+          <span class="badge status-pendente">🟡 PRONTO PARA APROVAÇÃO</span>
+          <h3>Editorial: Vestido Frente Única em Viscose Azul e Verde Paisley — Geysa Viana</h3>
+          <a href="previas/vestido-azul-verde-paisley.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/stories/d1-contagem-regressiva/story-01.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/vestido-curto-tomara-que-caia-azul-boho/slide-1.png" alt="vestido-curto-tomara-que-caia-azul" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">story • rascunho</span>
-          <h2>Story D-1: Contagem Regressiva Oficial</h2>
-          <a href="d1-contagem-regressiva.html">Visualizar Prévia →</a>
+          <span class="badge status-pendente">🟡 PRONTO PARA APROVAÇÃO</span>
+          <h3>Editorial: Vestido Indiano Curto Tomara que Caia com Lastex Azul Boho — Geysa Viana</h3>
+          <a href="previas/vestido-curto-tomara-que-caia-azul.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/stories/d2-conexao-base-antiga/story-01.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/painel-macrame-triangular-cru/slide-1.png" alt="painel-macrame-triangular-cru" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">story • rascunho</span>
-          <h2>Story D-2: Conexão com a Base Antiga</h2>
-          <a href="d2-conexao-base-antiga.html">Visualizar Prévia →</a>
+          <span class="badge status-publicado">✓ PUBLICADO NO INSTAGRAM</span>
+          <h3>Decoração &amp; Harmonia: Painel de Macramê Cru Triangular com Contas de Madeira</h3>
+          <a href="previas/painel-macrame-triangular-cru.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-<article>
-        <img src="../saidas/stories/d3-o-primeiro-sussurro/story-01.png" alt="Capa">
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/brinco-indiano-mandala-turquesa-vermelho/slide-1.png" alt="brinco-indiano-mandala-turquesa-vermelho" loading="lazy">
+        </div>
         <div class="card-body">
-          <span class="status">story • rascunho</span>
-          <h2>Story D-3: O Primeiro Sussurro</h2>
-          <a href="d3-o-primeiro-sussurro.html">Visualizar Prévia →</a>
+          <span class="badge status-pendente">🟡 PRONTO PARA APROVAÇÃO</span>
+          <h3>Joalheria &amp; Poder Feminino: Brinco Indiano Mandala Metal Envelhecido Turquesa e Vermelho</h3>
+          <a href="previas/brinco-indiano-mandala-turquesa-vermelho.html" class="btn-ver">Visualizar Prévia →</a>
         </div>
       </article>
-    </section>
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/camisetas-indianas-mandalas-variedades/slide-1.png" alt="camisetas-indianas-mandalas-variedades" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="badge status-pendente">🟡 PRONTO PARA APROVAÇÃO</span>
+          <h3>Coleção Camisetas &amp; Batas: Grande Mandala Solar e Variedade de Estilos — Geysa Viana</h3>
+          <a href="previas/camisetas-indianas-mandalas-variedades.html" class="btn-ver">Visualizar Prévia →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/carrosseis/kate-middleton-moda-indiana/slide-1.png" alt="kate-middleton-moda-indiana" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="badge status-publicado">✓ PUBLICADO NO INSTAGRAM</span>
+          <h3>Editorial &amp; Notícia: Kate Middleton, Earthshot Gala &amp; Quebra do Mito da Moda Indiana</h3>
+          <a href="previas/kate-middleton-moda-indiana.html" class="btn-ver">Visualizar Prévia →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/reels/capas/capa-reels-opcao1-smartphone-vinho.png" alt="capas-reels-como-funciona-a-loja" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="badge status-pendente">🟡 PRONTO PARA APROVAÇÃO</span>
+          <h3>Reels &amp; Capas: Como Funciona a Loja Online (Modelos para Aprovação)</h3>
+          <a href="previas/capas-reels-como-funciona-a-loja.html" class="btn-ver">Visualizar Prévia →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <img src="saidas/stories/depoimentos-google/story-01-capa-5estrelas-google.png" alt="stories-depoimentos-google" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="badge status-pendente">🟡 PRONTO PARA APROVAÇÃO</span>
+          <h3>Stories &amp; Destaque: Avaliações 5.0★ Google Meu Negócio — Geysa Viana</h3>
+          <a href="previas/stories-depoimentos-google.html" class="btn-ver">Visualizar Prévia →</a>
+        </div>
+      </article>
   </main>
 </body>
 </html>
