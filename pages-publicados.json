@@ -37,9 +37,10 @@
   {
     "slug": "capas-dos-destaques",
     "titulo": "Capas Oficiais dos Destaques — Geysa Viana Moda Indiana",
-    "status": "pendente_aprovacao",
+    "status": "Publicado",
     "imagem": "saidas/destaques/capa-01-nova-era.png",
-    "preview": "previas/capas-dos-destaques.html"
+    "preview": "previas/capas-dos-destaques.html",
+    "publicadoEm": "2026-11-19T13:40:16.085Z"
   },
   {
     "slug": "a-nobreza-da-seda-e-arte-textil",
@@ -96,7 +97,8 @@
     "titulo": "Editorial & Notícia: Kate Middleton, Earthshot Gala & Quebra do Mito da Moda Indiana",
     "status": "Publicado",
     "imagem": "saidas/carrosseis/kate-middleton-moda-indiana/slide-1.png",
-    "preview": "previas/kate-middleton-moda-indiana.html"
+    "preview": "previas/kate-middleton-moda-indiana.html",
+    "publicadoEm": "2026-11-19T13:40:16.056Z"
   },
   {
     "slug": "capas-reels-como-funciona-a-loja",
